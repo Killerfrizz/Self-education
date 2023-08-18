@@ -5,6 +5,14 @@ body{
     font-family: 'Montserrat', sans-serif;
     color: #333333;
 }
+hr{
+    border: 0;
+    width: 100%;
+    display: block;
+    height: 1px;
+    margin-top: 50px;
+    background-color: #e5e5e5;
+}
 *,*::before,*::after{
     box-sizing: border-box;
 }
@@ -156,8 +164,6 @@ h1,h2,h3,h4,h5,h6{
 }
 
 /*header navigation*/
-
-
 .nav{
     font-size: 14px;
     text-transform: uppercase;
@@ -191,4 +197,316 @@ h1,h2,h3,h4,h5,h6{
 }
 .nav_link:hover:after{
     opacity: 1;
+}
+
+/*about and section*/
+.about{
+    width: 100%;
+    padding-bottom: 110px;
+    background-color: #fff;
+}
+.section_titleblock{
+    margin: 80px auto 0;
+    text-align: center;
+}
+.section_subtitle{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+}
+.section_title{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.section_title::after{
+    content: "";
+    margin: 30px auto 0;
+    display: block;
+    top: 100%;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+}
+.about_content{
+    text-align: center;
+    width: 100%;
+    max-width: 950px;
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    margin: 50px auto 100px;
+}
+
+.about_inner{
+    display: flex;
+    justify-content: space-between;
+}
+
+.about_item{
+    width: 380px;
+    background-color: #95e1d3;
+}
+
+.about_item:hover .about_img{
+    transform: translate3d(-10px, -10px, 0);
+}
+
+.about_item:hover .about_img img{
+    opacity: 0.1;
+}
+
+.about_item:hover .img_text{
+    opacity: 1;
+}
+
+.about_img{
+    background: linear-gradient( #f38181,#fce38a);
+    transition: transform 0.2s linear;
+    position: relative;
+}
+
+.about_img img{
+    display: block;
+    transition: opacity 0.1s linear;
+}
+.img_text{
+    transition: opacity .1s linear;
+    width: 100%;
+    color: #fff;
+    font-weight: bold;
+    font-style: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 2;
+    opacity: 0;
+}
+
+/*Statistics*/
+.statistics{
+    background-color: #95e1d3;
+
+}
+.stat_block{
+    display: flex;
+}
+.stat_item{
+    flex: 1 1 0;
+    border-right: 1px solid #b5eae0;
+    border-left: 1px solid #b5eae0;
+    border-collapse: collapse;
+    text-align: center;
+    color: #fff;
+    padding: 70px 25px;
+}
+.stat_num{
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.stat_text{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+/*services*/
+.services{
+    width: 100%;
+    padding-bottom: 120px;
+}
+
+.services_info{
+    display: flex;
+    margin-top: 60px;
+}
+.services_item{
+    flex: 1 1 0;
+    padding-left: 85px;
+    padding-right: 30px;
+    position: relative;
+}
+.services_icon{
+    position: absolute;
+    left: 30px;
+    top: 5px;
+    z-index: 1;
+}
+.services_title{
+    font-style: 14px;
+    color: #333333;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.services_text{
+    font-size: 15px;
+    color: #999999;
+    font-family: 'Roboto', sans-serif;
+}
+
+/*design*/
+.design{
+    padding-top: 110px;
+    background: url("images/design_background.jpg") center no-repeat;
+    background-size: cover;
+    margin-bottom: 110px;
+}
+.devices{
+    max-width: 600px;
+    margin: 45px auto 0;
+    position: relative;
+}
+.devices_item{
+    display: block;
+
+}
+.devices_item--iphone{
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    bottom: -50px;
+}
+
+/*what we do*/
+.what{
+    margin-bottom: 120px;
+}
+.what_inner{
+    display: flex;
+}
+.what_item{
+    width: 50%;
+}
+
+/*accordeon*/
+.accordion_item{
+    border: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+}
+.accordion_item.active
+.accordion_text{
+    display: block;
+}
+.accordion_item.active
+.accordion_header::after{
+    transform: translateY(-50%) rotate(45deg);
+    margin-top: 3px;    
+}
+.accordion_item.active
+.accordion_header{
+    border-bottom-color:#e5e5e5;
+}
+.accordion_header{
+    padding: 15px 20px 15px 60px;
+    position: relative;
+    border-bottom: 1px solid transparent;
+    cursor: pointer;
+}
+
+.accordion_header::after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #ccc;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: 1;
+    transform: translateY(-50%) rotate(-135deg);
+    margin-top: -3px;
+}
+
+.accordion_title{
+    text-transform: uppercase;
+    font-style: 14px;
+    color: #333333;
+    font-weight: 500;
+}
+
+.accordion_icon{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
+    z-index: 1;
+}
+
+.accordion_text{
+    padding: 9px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #999999;
+    font-style: 15px;
+    font-weight: 300;
+    font-style: italic;
+    display: none;
+}
+
+/*comment*/
+.section_comment{
+    background-color: #f8f8f8;
+}
+.comment{
+    padding: 70px 110px;
+    position: relative;
+}
+.comment_item{
+    padding-left: 205px;
+    position: relative;
+}
+.comment_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+.comment_text{
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    color: #999999;
+    padding-bottom: 5px;
+}
+.comment_author{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 24px;
+
+}
+.comment_author::before{
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    height: 3px;
+    background-color: #f38181;
+}
+.comment_btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    font-size: 0;
+    color: transparent;
+}
+.comment_btn::after{
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+
+    border-top: 3px solid #ccc;
+    border-left: 3px solid #ccc;
+    
+    
+}
+.comment_btn--prev{
+    left: 0;
+    transform: rotate(-45deg);
+}
+.comment_btn--next{
+    right: 0;
+    transform: rotate(135deg);
 }
