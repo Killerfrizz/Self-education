@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <title>Library</title>
+</head>
+
+<body>
+
+    <!--header and nav-->
+    <header class="header">
+        <div class="header_inner">
+            <div class="header_logo">
+                Brooklyn Public Library
+            </div>
+            <nav class="nav">
+                <a class="nav_link" href="#">About</a>
+                <a class="nav_link" href="#">Favorites</a>
+                <a class="nav_link" href="#">Coffee shop</a>
+                <a class="nav_link" href="#">Contacts</a>
+                <a class="nav_link" href="#">Library Card</a>
+                <a class="nav_link" href="#"><!--Here will be icon--></a>
+            </nav>
+        </div>
+    </header>
+
+    <!--welcome-->
+    <section class="welcome">
+        <div class="welcome_block">
+            <div class="welcome_text">
+                <div>Welcome</div>
+                <div>to the Brooklyn</div>
+                <div>Library</div>
+            </div>
+        </div>
+    </section><!--welcome-->
+
+    <!--about-->
+    <section class="section section--about">
+        <div class="section_title">
+            About
+        </div>
+        <div class="section_title_text">
+            The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside
+        </div>
+
+        <div class="slider">
+            <img class="about_img" src="images/about/1.jpg" alt="">
+            <img class="about_img" src="images/about/2.jpg" alt="">
+            <img class="about_img" src="images/about/3.jpg" alt="">
+        </div>
+
+        <div class="slider_dots">
+            <a href="#" class="dot active">1
+            </a><a href="#" class="dot">2
+            </a><a href="#" class="dot">3</a>
+        </div>
+    </section><!--about-->
+
+    <!--favorites-->
+    <section class="section">
+        <div class="section_title">
+            Favorites
+        </div>
+        <div class="favorites_titletext">
+            Pick favorites of season
+        </div>
+        <div class="buttons_fav">
+            <input type="radio" id="winter" name="season" value="winter" checked />
+            <label class="favorites_label active" for="winter">Winter</label>
+            <input type="radio" id="spring" name="season" value="spring">
+            <label class="favorites_label" for="spring">Spring</label>
+            <input type="radio" id="summer" name="season" value="summer">
+            <label class="favorites_label" for="summer">Summer</label>
+            <input type="radio" id="autumn" name="season" value="autumn">
+            <label class="favorites_label" for="autumn">Autumn</label>
+        </div>
+        <div class="favorites">
+            <div class="favorites_col"><!--Column1-->
+
+                <div class="favorites_item"><!--item1-->
+                    <div class="favorites_title">
+                        Staff Picks
+                    </div>
+                    <div class="favorites_name">
+                        THE BOOK EATERS
+                        <p>By Sunyi Dean</p>
+                    </div>
+                    <div class="favorites_text">
+                        An unusual sci-fi story about a book eater woman who tries desperately to
+                        save her dangerous mind-eater son from tradition and certain death. Complete
+                        with dysfunctional family values, light Sapphic romance, and a strong, complex
+                        protagonist. Not for the faint of heart.
+                    </div>
+                    <img class="favorites_img" src="images/favorites/winter/1.jpg" alt="">
+                    <button class="favorites_btn">Buy</button>
+                </div>
+
+                <div class="favorites_item"><!--item2-->
+                    <div class="favorites_title">
+                        Staff Picks
+                    </div>
+                    <div class="favorites_name">
+                        Dante: Poet of the Secular World
+                        <p>By Erich Auerbach</p>
+                    </div>
+                    <div class="favorites_text">
+                        Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy,
+                        and philosophy in general, arguing for Dante's uniqueness as one who raised the individual
+                        and his drama of soul into something of divine significance—an inspired introduction to
+                        Dante's main themes.
+                    </div>
+                    <img class="favorites_img" src="images/favorites/winter/2.jpg" alt="">
+                    <button class="favorites_btn">Buy</button>
+                </div>
+            </div><!--favorites_col-->
+
+            <div class="favorites_col"><!--column2-->
+
+                <div class="favorites_item">
+                    <div class="favorites_title">
+                        Staff Picks
+                    </div>
+                    <div class="favorites_name">
+                        Cacx`le
+                        <p>By Rachel Harrison</p>
+                    </div>
+                    <div class="favorites_text">
+                        Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no
+                        further than here - where a woman recovering from a breakup moves to a quaint town in upstate
+                        New York and befriends a beautiful witch.
+                    </div>
+                    <img class="favorites_img" src="images/favorites/winter/3.jpg" alt="">
+                    <button class="favorites_btn">Buy</button>
+                </div>
+
+                <div class="favorites_item">
+                    <div class="favorites_title">
+                        Staff Picks
+                    </div>
+                    <div class="favorites_name">
+                        The Last Queen
+                        <p>By Clive Irving</p>
+                    </div>
+                    <div class="favorites_text">
+                        A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the
+                        Windsors have evolved and thrived as the modern world has changed around them.
+                    </div>
+                    <img class="favorites_img" src="images/favorites/winter/4.jpg" alt="">
+                    <button class="favorites_btn btn_own">Buy</button>
+                </div>
+            </div><!--favorites_col-->
+
+        </div><!--favorites-->
+    </section><!--favorites-->
+
+    <!--Shop-->
+    <section class="section">
+        <div class="section_title">
+            Coffee Shop
+        </div>
+        <div class="section_title_text section_title_text--letspace">
+            In our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly
+            conversation.
+            you can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can
+            try desserts from bakery.
+        </div>
+        <div class="shop_inner">
+            <div class="shop_col"><!--column1-->
+                <div class="shop_col_title">
+                    Coffee & Tea
+                </div>
+                <div class="shop_item"><!--1-->
+                    <span class="shop_dish">Cold Brew Coffee
+                    </span><span class="shop_price">$3</span>
+                </div>
+                <div class="shop_item"><!--2-->
+                    <span class="shop_dish">French Press Pot
+                    </span><span class="shop_price">$5</span>
+                </div>
+                <div class="shop_item"><!--3-->
+                    <span class="shop_dish">Espresso
+                    </span><span class="shop_price">$2</span>
+                </div>
+                <div class="shop_item"><!--4-->
+                    <span class="shop_dish">Cappuccino
+                    </span><span class="shop_price">$4</span>
+                </div>
+                <div class="shop_item"><!--5-->
+                    <span class="shop_dish">Hot tea
+                    </span><span class="shop_price">$2</span>
+                </div>
+                <div class="shop_item"><!--6-->
+                    <span class="shop_dish">Cold tea
+                    </span><span class="shop_price">$2</span>
+                </div>
+            </div><!--column1-->
+
+            <div class="shop_col"><!--column2-->
+                <div class="shop_col_title">
+                    Desserts & Cakes  
+                </div>
+                <div class="shop_item"><!--1-->
+                    <span class="shop_dish">Forest Gateau
+                    </span><span class="shop_price">$16</span>
+                </div>
+                <div class="shop_item"><!--2-->
+                    <span class="shop_dish">Blue Moon
+                    </span><span class="shop_price">$16</span>
+                </div>
+                <div class="shop_item"><!--3-->
+                    <span class="shop_dish">Truffle Cake
+                    </span><span class="shop_price">$15</span>
+                </div>
+                <div class="shop_item"><!--4-->
+                    <span class="shop_dish">Chocolate Cake
+                    </span><span class="shop_price">$18</span>
+                </div>
+                <div class="shop_item"><!--5-->
+                    <span class="shop_dish">Poet’s Dream Cake
+                    </span><span class="shop_price">$16</span>
+                </div>
+                <div class="shop_item"><!--6-->
+                    <span class="shop_dish">Pineapple Cake
+                    </span><span class="shop_price">$14</span>
+                </div>
+            </div><!--column2-->
+        </div><!--shop_inner-->
+    </section><!--shop-->
+
+    <!--contacts-->
+    <section class="section">
+        <div class="section_title">
+            Our Contacts
+        </div>
+</body>
+
+</html>
