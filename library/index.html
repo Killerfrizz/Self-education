@@ -10,30 +10,37 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/40bf753c61.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <title>Library</title>
 </head>
 
 <body>
-
+    <div class="page">
     <!--header and nav-->
-    <header class="header">
+    <header class="header" id="header">
         <div class="header_inner">
             <div class="header_logo">
                 Brooklyn Public Library
             </div>
-            <nav class="nav">
-                <a class="nav_link" href="#">About</a>
-                <a class="nav_link" href="#">Favorites</a>
-                <a class="nav_link" href="#">Coffee shop</a>
-                <a class="nav_link" href="#">Contacts</a>
-                <a class="nav_link" href="#">Library Card</a>
-                <a class="nav_link" href="#"><!--Here will be icon--></a>
+            <nav class="nav" id="nav">
+                <a class="nav_link" data-scroll="#about" href="#">About</a>
+                <a class="nav_link" data-scroll="#favorites" href="#">Favorites</a>
+                <a class="nav_link" data-scroll="#shop" href="#">Coffee shop</a>
+                <a class="nav_link" data-scroll="#contacts" href="#">Contacts</a>
+                <a class="nav_link" data-scroll="#digital-card" href="#">Library Card</a>
+                
             </nav>
+            <div class="nav_link icon">
+                <img src="images/icons/icon_profile.png" alt="Profile">
+            </div>
+            <button class="nav-toggle" id="nav-toggle" type="button">
+                <span class="nav-toggle_item">menu</span>
+            </button>
         </div>
     </header>
 
     <!--welcome-->
-    <section class="welcome">
+    <section class="welcome" id="welcome">
         <div class="welcome_block">
             <div class="welcome_text">
                 <div>Welcome</div>
@@ -44,7 +51,7 @@
     </section><!--welcome-->
 
     <!--about-->
-    <section class="section section--about">
+    <section class="section section--about" id="about">
         <div class="section_title">
             About
         </div>
@@ -54,19 +61,24 @@
 
         <div class="slider">
             <img class="about_img" src="images/about/1.jpg" alt="">
-            <img class="about_img" src="images/about/2.jpg" alt="">
-            <img class="about_img" src="images/about/3.jpg" alt="">
+            <img class="about_img about_img--mini" src="images/about/2.jpg" alt="">
+            <img class="about_img about_img--mini" src="images/about/3.jpg" alt="">
+            <div class="slider_arrow slider_arrow--right">1</div>
+            <div class="slider_arrow slider_arrow--left">2</div>
         </div>
 
         <div class="slider_dots">
             <a href="#" class="dot active">1
             </a><a href="#" class="dot">2
-            </a><a href="#" class="dot">3</a>
+            </a><a href="#" class="dot">3
+            </a><a href="#" class="dot dot--mini">1
+            </a><a href="#" class="dot dot--mini">2
+            </a>
         </div>
     </section><!--about-->
 
     <!--favorites-->
-    <section class="section">
+    <section class="section" id="favorites">
         <div class="section_title">
             Favorites
         </div>
@@ -163,7 +175,7 @@
     </section><!--favorites-->
 
     <!--Shop-->
-    <section class="section">
+    <section class="section" id="shop">
         <div class="section_title">
             Coffee Shop
         </div>
@@ -205,30 +217,30 @@
             </div><!--column1-->
 
             <div class="shop_col"><!--column2-->
-                <div class="shop_col_title">
+                <div class="shop_col_title second">
                     Desserts & Cakes
                 </div>
-                <div class="shop_item"><!--1-->
+                <div class="shop_item second"><!--1-->
                     <span class="shop_dish">Forest Gateau
                     </span><span class="shop_price">$16</span>
                 </div>
-                <div class="shop_item"><!--2-->
+                <div class="shop_item second"><!--2-->
                     <span class="shop_dish">Blue Moon
                     </span><span class="shop_price">$16</span>
                 </div>
-                <div class="shop_item"><!--3-->
+                <div class="shop_item second"><!--3-->
                     <span class="shop_dish">Truffle Cake
                     </span><span class="shop_price">$15</span>
                 </div>
-                <div class="shop_item"><!--4-->
+                <div class="shop_item second"><!--4-->
                     <span class="shop_dish">Chocolate Cake
                     </span><span class="shop_price">$18</span>
                 </div>
-                <div class="shop_item"><!--5-->
+                <div class="shop_item second"><!--5-->
                     <span class="shop_dish">Poet’s Dream Cake
                     </span><span class="shop_price">$16</span>
                 </div>
-                <div class="shop_item"><!--6-->
+                <div class="shop_item second"><!--6-->
                     <span class="shop_dish">Pineapple Cake
                     </span><span class="shop_price">$14</span>
                 </div>
@@ -237,7 +249,7 @@
     </section><!--shop-->
 
     <!--contacts-->
-    <section class="section">
+    <section class="section" id="contacts">
         <div class="section_title">
             Our Contacts
         </div>
@@ -266,7 +278,7 @@
     </section><!--contacts-->
 
     <!--digital card-->
-    <section class="section">
+    <section class="section" id="digital-card">
         <div class="section_title">
             Digital Library Cards
         </div>
@@ -334,6 +346,9 @@
             </div>
         </div>
     </footer>
+    
+    <script src="script.js"></script>
+</div>
 </body>
 
 </html>
