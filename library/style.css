@@ -41,40 +41,94 @@ body {
 
 .nav {
     display: inline-block;
-    width: 50%;
+    width: 90%;
     vertical-align: middle;
     right: 0;
     display: flex;
     position: relative;
 }
-
-.nav_link {
+.nav_inner{
+    width: 55%;
+    display: flex;
+}
+.mobile_nav{
     display: inline-block;
+}
+.nav_link {
+    display: inline;
     text-decoration: none;
     color: #fff;
     font-size: 20px;
     margin: auto 30px auto 0;
+    cursor: pointer;
+}
+.profile_span img{
+    vertical-align: middle;
+    position: relative;
+    z-index: 100;
+    transform: translateY(-3px);
+}
+.profile_span{
+    display: inline-block;
+    position: relative;
+    height: 100%;
+}
+.profile_block{
+    display: inline-block;
+    
+    position: absolute;
+    right: -300px;
+    width: 80px;
+    height: 115px;
+    top: 65%;
+    background-color: #fff;
+    z-index: 100;
+    text-align: center;
+    line-height: 20px;
+    transition: all linear 0.2s;
+}
+.profile_block_visible{
+    
+    right: 50%;
+    
+}
+.profile_title{
+    
+    vertical-align: middle;
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 10px;
+    position: relative;
+    text-align: center;
 }
 
-.nav_link.icon {
-    display: inline-block;
+.profile_title::after{
+    content: "";
     position: absolute;
-    width: 26px;
-    height: 26px;
-    right: 0;
-    top: 47%;
-    transform: translateY(-50%);
+    width: 40px;
+    height: 1px;
+    background-color: #BB945F;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.nav_link.icon img{
-    transform: translateY(-100%);
+
+.profile_actions_inner{
+    height: 85px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.profile_actions{
+    color: #000;
+    text-decoration: none;
+    line-height: 30px;
+    font-size: 15px;
 }
 
 .nav-toggle {
     display: none;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 20px;
+    position: relative;
     z-index: 10;
     width: 45px;
     padding: 10px 0;
@@ -294,11 +348,17 @@ body {
 .favorites_titletext {
     font-size: 20px;
     font-weight: 700;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .buttons_fav {
-    margin-bottom: 40px;
+    padding: 20px 0 20px;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    width: 101%;
+    background-color: #fff;
 }
 
 .buttons_fav input {
@@ -679,9 +739,9 @@ body {
     padding: 44px 0 19px;
 }
 
-@media (max-width:1275px) {
-    .nav {
-        width: 60%;
+@media (max-width:1340px) {
+    .nav_inner {
+        width: 65%;
     }
 
     .favorites_item {
@@ -706,7 +766,7 @@ body {
 
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1120px) {
     .header_logo {
         font-size: 20px;
     }
@@ -745,6 +805,9 @@ body {
 }
 
 @media (max-width: 1020px) {
+    .nav_inner {
+        width: 69%;
+    }
 
     /*favorites_col*/
     .favorites_col {
@@ -841,9 +904,7 @@ body {
 }
 
 @media (max-width: 880px) {
-    .nav {
-        width: 69%;
-    }
+    
 
     .card_inner {
         flex-wrap: wrap;
@@ -873,7 +934,10 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 805px) {
+    .nav_inner{
+        width: 20%;
+    }
     .nav {
         width: 332px;
         height: 570px;
@@ -889,6 +953,10 @@ body {
         top: 0;
         transition:  all .3s linear;
     }
+    .profile_span img{
+        display: inline-block;
+        width: 28px;
+    }
 
     .nav.active{
         right: 0;
@@ -899,16 +967,17 @@ body {
         width: 100%;
         font-size: 20px;
     }
-
+    .mobile_nav{
+        display: flex;
+    }
     .nav_link.icon {
-        display: block;
-        position: absolute;
-        right: 85px;
+        display: inline;
+        
         z-index: 10;
     }
 
     .nav-toggle {
-        display: block;
+        display: inline-block;
         
     }
 

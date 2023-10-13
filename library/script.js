@@ -149,3 +149,36 @@ Rsummer.onchange = function () {
 Rautumn.onchange = function () {
     checkSeason("autumn");
 }
+
+/*profile*/
+const icon= document.getElementById("profile-icon");
+const profileBlock=document.getElementById("profile_block");
+const profileToggle=()=>{
+    profileBlock.classList.toggle("profile_block_visible")
+}
+
+icon.addEventListener("click",()=>{
+    profileToggle();
+    let toggle_menu_active = NAV.classList.contains("active");
+        if (toggle_menu_active){
+            NAV.classList.remove("active");
+            BURGER.classList.remove("active");
+        }
+})
+
+document.addEventListener("click",e =>{
+    let target = e.target;
+    let its_menu = target == profileBlock || profileBlock.contains(target);
+    let its_icon = target == icon;
+    let menu_is_active = profileBlock.classList.contains('profile_block_visible');
+    if (!its_menu && !its_icon && menu_is_active) {
+        profileToggle();
+    }
+    let toggle_menu_active = NAV.classList.contains("active");
+    let its_burger = target == BURGER;
+    if (toggle_menu_active && !its_burger){
+        NAV.classList.remove("active");
+        BURGER.classList.remove("active")
+    }
+    
+})
