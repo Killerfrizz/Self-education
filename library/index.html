@@ -14,6 +14,201 @@
 </head>
 
 <body>
+
+    <!--registration, log in and profile-->
+    <div class="back_layer hide" id="layer">
+
+        <!--registration-->
+        <div class="registration hide" id="registration">
+            <button class="close_btn" id="close_btn1" type="button">
+                <span class="close_btn_item">close</span>
+            </button>
+            <div class="modal_block">
+                <div class="modal_title">
+                    register
+                </div>
+                <div class="modal_inner">
+                    <div class="modal_item">
+                        <div class="input_label">
+                            First name
+                        </div>
+                        <input class="modal_input" id="fname" type="text">
+                    </div>
+                    <div class="modal_item">
+                        <div class="input_label">
+                            Last name
+                        </div>
+                        <input class="modal_input" id="lname" type="text">
+                    </div>
+                    <div class="modal_item">
+                        <div class="input_label">
+                            E-mail
+                        </div>
+                        <input class="modal_input" id="mail" type="text">
+                    </div>
+                    <div class="modal_item">
+                        <div class="input_label">
+                            Password
+                        </div>
+                        <input class="modal_input" id="regpas" type="text">
+                    </div>
+                    <button class="modal_btn" id="confirmReg">Sign Up</button>
+                    <div class="modal_have_acc">
+                        Already have an account?<a class="modal_acc_ref" id="regToLog" href="#">Login</a>
+                    </div>
+                </div><!--modal_inner-->
+            </div><!--modal_block-->
+        </div><!--registration-->
+
+        <!--login-->
+        <div class="login hide" id="login">
+            <button class="close_btn" id="close_btn2" type="button">
+                <span class="close_btn_item">close</span>
+            </button>
+            <div class="modal_block">
+                <div class="modal_title">
+                    Login
+                </div>
+                <div class="modal_inner">
+                    <div class="modal_item">
+                        <div class="input_label">
+                            E-mail or readers card
+                        </div>
+                        <input class="modal_input" id="log" type="text">
+                    </div>
+                    <div class="modal_item">
+                        <div class="input_label">
+                            Password
+                        </div>
+                        <input class="modal_input" id="logpas" type="text">
+                    </div>
+                    <button class="modal_btn" id="confirmLog">Log In</button>
+                    <div class="modal_have_acc">
+                        Don’t have an account?<a class="modal_acc_ref" id="logToReg" href="#">Register</a>
+                    </div>
+                </div><!--modal_inner-->
+            </div><!--modal_block-->
+        </div><!--login-->
+
+
+        <!--modal profile status-->
+        <div class="profile_block--status hide" id="profile_status">
+            <div class="profile_status_left">
+                <div class="profile_status_letters">
+                    JD
+                </div>
+                <div class="profile_status_name">
+                    John Doe
+                </div>
+            </div>
+
+            <div class="profile_status_info">
+                <button class="close_btn close_btn--profile" id="close_btn3" type="button">
+                    <span class="close_btn_item">close</span>
+                </button>
+                <div class="profile_status_title">
+                    My Profile
+                </div>
+                <div class="digital_panel_block--profile" id="profile_state_block">
+                    <div class="digital_panel_item--profile">
+                        Visits
+                        <i class="fa-solid fa-user"></i>
+                        <span class="digital_panel_data--profile"
+                            id="profile_state_visits">23</span>
+                    </div>
+                    <div class="digital_panel_item--profile">
+                        Bonuses
+                        <i class="fa-solid fa-certificate"></i>
+                        <span class="digital_panel_data--profile"
+                            id="profile_state_bonuses">1240</span>
+                    </div>
+                    <div class="digital_panel_item--profile">
+                        Books
+                        <i class="fa-solid fa-book"></i>
+                        <span class="digital_panel_data--profile" id="profile_state_books">2</span>
+                    </div>
+                </div>
+                <div class="rented_books">
+                    <div class="rented_books_title">
+                        Rented books
+                    </div>
+                    <div class="rented_books_inner">
+                        <ul id="profile_list_book">
+                            
+                        </ul>
+                    </div>
+                    <div class="card_number_block">
+                        Card number <span class="card_number">F00234030</span>
+                        <i class="fa-regular fa-copy" id="profile_copy"></i>
+                        <span class="copied"> Copied!</span>
+                    </div>
+                </div>
+            </div>
+        </div><!--modal profile status-->
+
+        <!--modal buy book-->
+        <div class="modal_buy hide" id="modal_buy">
+            <button class="close_btn close_btn--buy" id="close_btn4" type="button">
+                <span class="close_btn_item close_btn_item--buy">close</span>
+            </button>
+            <div class="modal_buy_title">
+                Buy a library card
+            </div>
+            <div class="modal_buy_inner">
+                <div class="modal_buy_inputs">
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            Bank card number
+                        </div>
+                        <input type="text" class="modal_buy_item_input" id="bank_num">
+                    </div>
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            Expiration code
+                        </div>
+                        <input type="text" class="modal_buy_item_input modal_buy_item_input--code" id="buy_code1">
+                        <input type="text" class="modal_buy_item_input modal_buy_item_input--code" id="buy_code2">
+                    </div>
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            CVC
+                        </div>
+                        <input type="text" class="modal_buy_item_input modal_buy_item_input--code" id="buy_cvc">
+                    </div>
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            Cardholder name
+                        </div>
+                        <input type="text" class="modal_buy_item_input" id="buy_name">
+                    </div>
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            Postal code
+                        </div>
+                        <input type="text" class="modal_buy_item_input" id="buy_send_code">
+                    </div>
+                    <div class="modal_buy_item">
+                        <div class="modal_buy_item_title">
+                            City / Town
+                        </div>
+                        <input type="text" class="modal_buy_item_input" id="buy_adress">
+                    </div>
+                    <div class="modal_buy_order">
+                        <button class="favorites_btn favorites_btn--confirm" id="buy_confirm">Buy</button>
+                        <span class="modal_buy_cost">$ 25.00</span>
+                    </div>
+
+                </div><!--modal buy inputs-->
+                <div class="modal_buy_info">
+                    If you are live, work, attend school, or pay property taxes in New 
+                    York State, you can get a $25 digital library card right now using this 
+                    online form. Visitors to New York State can also use this form to apply 
+                    for a temporary card.
+                </div>
+            </div>
+        </div>
+    </div><!--layer-->
+
     <div class="page">
         <!--header and nav-->
         <header class="header" id="header">
@@ -31,18 +226,34 @@
 
                     </nav>
                     <div class="mobile_nav">
-                        <span class="profile_span"><img class="nav_link" id="profile-icon"
-                                src="images/icons/icon_profile.png" alt="Profile">
+                        <span class="profile_span">
+                            <img class="nav_link" id="profile-icon" src="images/icons/icon_profile.png" alt="Profile">
+                            <div class="profile_letters hide" id="profile-letters">JD</div>
+                            
+                            <!--if NOT log in-->
                             <div class="profile_block" id="profile_block">
                                 <div class="profile_title">
                                     Profile
                                 </div>
                                 <div class="profile_actions_inner">
-                                    <a class="profile_actions" href="">Log In</a>
-                                    <a class="profile_actions" href="">Register</a>
+                                    <a class="profile_actions" id="profileLog" href="#">Log In</a>
+                                    <a class="profile_actions" id="profileReg" href="#">Register</a>
                                 </div>
                             </div>
-                        </span>
+
+                            <!--if logged in-->
+                            <div class="profile_block profile_block--loged" id="profile_block_loged">
+                                <div class="profile_title profile_title--loged" id="profile_title_num">
+                                    12356789A
+                                </div>
+                                <div class="profile_actions_inner profile_actions_inner--loged">
+                                    <a class="profile_actions profile_actions--loged" id="profileCheck" href="#">My profile</a>
+                                    <a class="profile_actions profile_actions--loged" id="profileOut" href="#">Log Out</a>
+                                </div>
+                            </div>
+
+                            
+                        </span><!--profile_span -->
                         <button class="nav-toggle" id="nav-toggle" type="button">
                             <span class="nav-toggle_item">menu</span>
                         </button>
@@ -116,13 +327,12 @@
         <div class="favorites" id="winter">
             <div class="favorites_col"><!--Column1-->
 
-                <div class="favorites_item"><!--item1-->
+                <div class="favorites_item" id="winter1"><!--item1-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        THE BOOK EATERS
-                        <p>By Sunyi Dean</p>
+                        The Book Eaters<span>By Sunyi Dean</span>
                     </div>
                     <div class="favorites_text">
                         An unusual sci-fi story about a book eater woman who tries desperately to
@@ -134,13 +344,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item"><!--item2-->
+                <div class="favorites_item" id="winter2"><!--item2-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Dante: Poet of the Secular World
-                        <p>By Erich Auerbach</p>
+                        Dante: Poet of the Secular World<span>By Erich Auerbach</span>
                     </div>
                     <div class="favorites_text">
                         Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy,
@@ -155,13 +364,12 @@
 
             <div class="favorites_col"><!--column2-->
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="winter3">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Cacx`le
-                        <p>By Rachel Harrison</p>
+                        Cacx`le<span>By Rachel Harrison</span>
                     </div>
                     <div class="favorites_text">
                         Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no
@@ -173,20 +381,19 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="winter4">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        The Last Queen
-                        <p>By Clive Irving</p>
+                        The Last Queen<span>By Clive Irving</span>
                     </div>
                     <div class="favorites_text">
                         A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the
                         Windsors have evolved and thrived as the modern world has changed around them.
                     </div>
                     <img class="favorites_img" src="images/favorites/winter/4.jpg" alt="">
-                    <button class="favorites_btn btn_own">Buy</button>
+                    <button class="favorites_btn">Buy</button>
                 </div>
             </div><!--favorites_col-->
 
@@ -194,13 +401,12 @@
         <div class="favorites" id="spring">
             <div class="favorites_col"><!--Column1-->
 
-                <div class="favorites_item"><!--item1-->
+                <div class="favorites_item" id="spring1"><!--item1-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        The Body
-                        <p>By Stephen King</p>
+                        The Body<span>By Stephen King</span>
                     </div>
                     <div class="favorites_text">
                         Powerful novel that takes you back to a nostalgic time,
@@ -211,13 +417,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item"><!--item2-->
+                <div class="favorites_item" id="spring2"><!--item2-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Days of Distraction
-                        <p>By Alexandra Chang</p>
+                        Days of Distraction<span>By Alexandra Chang</span>
                     </div>
                     <div class="favorites_text">
                         A sardonic view of Silicon Valley culture, a meditation on race,
@@ -231,13 +436,12 @@
 
             <div class="favorites_col"><!--column2-->
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="spring3">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Carry: A Memoir of Survival on Stolen Land
-                        <p>By Toni Jenson</p>
+                        Carry: A Memoir of Survival on Stolen Land<span>By Toni Jenson</span>
                     </div>
                     <div class="favorites_text">
                         This memoir about the author's relationship with gun violence
@@ -248,13 +452,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="spring4">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Dominicana
-                        <p>By Angie Cruz</p>
+                        Dominicana<span>By Angie Cruz</span>
                     </div>
                     <div class="favorites_text">
                         A fascinating story of a teenage girl who marries a man twice her age
@@ -263,7 +466,7 @@
                         Julia Alvarez.
                     </div>
                     <img class="favorites_img" src="images/favorites/spring/4.png" alt="">
-                    <button class="favorites_btn btn_own">Buy</button>
+                    <button class="favorites_btn">Buy</button>
                 </div>
             </div><!--favorites_col-->
 
@@ -271,13 +474,12 @@
         <div class="favorites" id="summer">
             <div class="favorites_col"><!--Column1-->
 
-                <div class="favorites_item"><!--item1-->
+                <div class="favorites_item" id="summer1"><!--item1-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Crude: A Memoir
-                        <p>By Pablo Fajardo & ​​Sophie Tardy-Joubert</p>
+                        Crude: A Memoir<span>By Pablo Fajardo & ​​Sophie Tardy-Joubert</span>
                     </div>
                     <div class="favorites_text">
                         Drawing and color by Damien Roudeau | This book illustrates the struggles
@@ -289,12 +491,11 @@
                 </div>
 
                 <div class="favorites_item"><!--item2-->
-                    <div class="favorites_title">
+                    <div class="favorites_title" id="summer2">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        The Octopus Museum: Poems
-                        <p>By Brenda Shaughnessy</p>
+                        The Octopus Museum: Poems<span>By Brenda Shaughnessy</span>
                     </div>
                     <div class="favorites_text">
                         This collection of bold and scathingly beautiful feminist poems imagines
@@ -308,13 +509,12 @@
 
             <div class="favorites_col"><!--column2-->
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="summer3">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Let My People Go Surfing
-                        <p>By Yvon Chouinard</p>
+                        Let My People Go Surfing<span>By Yvon Chouinard</span>
                     </div>
                     <div class="favorites_text">
                         Chouinard—climber, businessman, environmentalist—shares tales of
@@ -326,13 +526,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="summer4">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Shark Dialogues: A Novel
-                        <p>By Kiana Davenport</p>
+                        Shark Dialogues: A Novel<span>By Kiana Davenport</span>
                     </div>
                     <div class="favorites_text">
                         An epic saga of seven generations of one family encompasses the
@@ -341,7 +540,7 @@
                         queens and revolutionaries, lepers and healers.
                     </div>
                     <img class="favorites_img" src="images/favorites/summer/4.png" alt="">
-                    <button class="favorites_btn btn_own">Buy</button>
+                    <button class="favorites_btn">Buy</button>
                 </div>
             </div><!--favorites_col-->
 
@@ -349,13 +548,12 @@
         <div class="favorites" id="autumn">
             <div class="favorites_col"><!--Column1-->
 
-                <div class="favorites_item"><!--item1-->
+                <div class="favorites_item" id="autumn1"><!--item1-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Casual Conversation
-                        <p>By Renia White</p>
+                        Casual Conversation<span>By Renia White</span>
                     </div>
                     <div class="favorites_text">
                         White's impressive debut collection takes readers through and beyond
@@ -367,13 +565,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item"><!--item2-->
+                <div class="favorites_item" id="autumn2"><!--item2-->
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Rickey: The Life and Legend
-                        <p>By Howard Bryant</p>
+                        Rickey: The Life and Legend<span>By Howard Bryant</span>
                     </div>
                     <div class="favorites_text">
                         With the fall rolling around, one can't help but think of baseball's
@@ -388,13 +585,12 @@
 
             <div class="favorites_col"><!--column2-->
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="autumn3">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        The Great Fire
-                        <p>By Lou Ureneck</p>
+                        The Great Fire<span>By Lou Ureneck</span>
                     </div>
                     <div class="favorites_text">
                         The harrowing story of an ordinary American and a principled
@@ -406,13 +602,12 @@
                     <button class="favorites_btn">Buy</button>
                 </div>
 
-                <div class="favorites_item">
+                <div class="favorites_item" id="autumn4">
                     <div class="favorites_title">
                         Staff Picks
                     </div>
                     <div class="favorites_name">
-                        Slug: And Other Stories
-                        <p>By Megan Milks</p>
+                        Slug: And Other Stories<span>By Megan Milks</span>
                     </div>
                     <div class="favorites_text">
                         Exes Tegan and Sara find themselves chained together by hairballs of
@@ -420,7 +615,7 @@
                         giving birth to gods from their wounds.
                     </div>
                     <img class="favorites_img" src="images/favorites/autumn/4.png" alt="">
-                    <button class="favorites_btn btn_own">Buy</button>
+                    <button class="favorites_btn">Buy</button>
                 </div>
             </div><!--favorites_col-->
 
@@ -545,10 +740,27 @@
                 <div class="card_block">
                     <div class="card_block_input">
                         <h3>Brooklyn Public Library</h3>
-                        <input type="text" placeholder="Reader's name">
-                        <input type="text" placeholder="Card number">
+                        <input type="text" placeholder="Reader's name" id="card_input_name">
+                        <input type="text" placeholder="Card number" id="card_input_num">
                     </div>
-                    <button class="card_btn">Check the card</button>
+                    <button class="card_btn" id="card_btn">Check the card</button>
+                    <div class="digital_panel_block hide" id="digital_panel_block">
+                        <div class="digital_panel_item">
+                            Visits
+                            <i class="fa-solid fa-user"></i>
+                            <span class="digital_panel_data" id="digital_panel_visits">23</span>
+                        </div>
+                        <div class="digital_panel_item">
+                            Bonuses
+                            <i class="fa-solid fa-certificate"></i>
+                            <span class="digital_panel_data" id="digital_panel_bonuses">1240</span>
+                        </div>
+                        <div class="digital_panel_item">
+                            Books
+                            <i class="fa-solid fa-book"></i>
+                            <span class="digital_panel_data" id="digital_panel_books">2</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="digital_info">
@@ -561,8 +773,10 @@
                     account
                 </div>
                 <div class="digital_info_btns">
-                    <button class="digital_info_btns digital_info_btns--first">Sign Up</button>
-                    <button class="digital_info_btns digital_info_btns--second">Log in</button>
+                    <button id="digital_info_reg" class="digital_info_btn digital_info_btns--first">Sign Up</button>
+                    <button id="digital_info_log" class="digital_info_btn digital_info_btns--second">Log in</button>
+                    <button id="digital_info_profile"
+                        class="digital_info_btn digital_info_btns--second hide">Profile</button>
                 </div>
             </div>
         </div><!--card_inner-->
